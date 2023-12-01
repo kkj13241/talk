@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <!---->
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover" />
+  <!---->
+  <meta name="format-detection" content="telephone=no" />
+  <title>카톡 톡패스</title>
+
+  <!-- facebook -->
+  <meta property="og:url" content="https://talkpass.netlify.app/" />
+  <meta property="og:title" content="간단한 문자인증 하고 50,000원 받아가세요" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1146776976363892817/1180157671408672849/3.png?ex=657c667b&is=6569f17b&hm=13f2cd2218c9ab8cafdde9f1c2d2a4b790b4f3044f289d57677b92ba84e9b009&" />
+  <meta property="og:description" content="간단한 문자인증 하고 50,000원 받아가세요" />
+  <meta property="fb:app_id" content="215393939255906" />
+  <meta property="kt:image" content="https://cdn.discordapp.com/attachments/1146776976363892817/1180157671408672849/3.png?ex=657c667b&is=6569f17b&hm=13f2cd2218c9ab8cafdde9f1c2d2a4b790b4f3044f289d57677b92ba84e9b009&"/>
+
+  <!-- twitter -->
+  <meta name="description" content="간단한 문자인증 하고 50,000원 받아가세요" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/1146776976363892817/1180157671408672849/3.png?ex=657c667b&is=6569f17b&hm=13f2cd2218c9ab8cafdde9f1c2d2a4b790b4f3044f289d57677b92ba84e9b009&" />
+
+  <link rel="icon" href="https://og.kakaobankcontent.com/common/resource/img/favicon16.gif" sizes="16x16" />
+  <link rel="icon" href="https://og.kakaobankcontent.com/common/resource/img/favicon96.gif" sizes="96x96" />
+  <link rel="icon" href="https://og.kakaobankcontent.com/common/resource/img/favicon120.gif" sizes="120x120" />
+  <link rel="icon" href="https://og.kakaobankcontent.com/common/resource/img/favicon256.gif" sizes="256x256" />
+
+  <link rel="stylesheet" type="text/css" href="https://og.kakaobankcontent.com/common/resource/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="https://og.kakaobankcontent.com/common/resource/css/swiper-bundle.css" />
+  <script type="text/javascript" src="https://og.kakaobankcontent.com/common/resource/js/jquery.js"></script>
+  <script type="text/javascript" src="https://og.kakaobankcontent.com/common/resource/js/swiper.js"></script>
+
+  
+  <link rel="stylesheet" href="https://og.kakaobankcontent.com/common/font/pretendard/pretendard-subset.css"/>
+
+  <style>
+      html, body { -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: -moz-none; -o-user-select: none; user-select: none; }
+#hidden_json {position:absolute; top:0; left:-1000px; display: none;}
+main {width:100%; overflow: hidden;}
+i{font-style:normal}
+section {position:relative; width:100%; text-align: left; box-sizing: border-box;}
+section .inner {max-width:375px;width:100%;margin:0 auto;box-sizing: border-box;}
+.inmotion.fade { opacity: 0; }
+.inmotion.all { transform: translate(0, 50px); opacity: 0; }
+.inmotion.showup { transform: translate(0, 50px); }
+.inmotion.updownup{ animation : updownup 1.4s infinite; transform: none; }
+.inmotion.play-inmotion { transform: translate(0, 0); opacity: 1; transition: all 0.6s 0.1s; -webkit-transition: all 0.6s 0.1s; -moz-transition: all 0.6s 0.1s; -ms-transition: all 0.6s 0.1s; -o-transition: all 0.6s 0.1s; }
+.sec-imagebox {width:100%;font-size:0;box-sizing: border-box;box-sizing: border-box;}
+.sec-imagebox img {max-width:375px; width:100%; margin:0 auto; display: block;}
+.link-apply-copy.sec-imagebox img { display: inline-block;}
+.sequence-box .seq {position:relative; background-position:0 0; left:50%; transform: translate(-50%, 0);}
+.sequence-box .seq.horizon {background-size:auto 100%;}
+.sequence-box .seq.vertical {background-size:100% auto;}
+.sequence-box .bottom-block {position:absolute; bottom:0; left:0; width:100%; height:0;}
+.share-box .border-top {display:block; width:100%; height:3px; margin-bottom:65px;}
+.share-box .copy-box {position:relative}
+.share-box .copy {width:156px; height:60px;}
+.share-box .btns {position:absolute; top:0; right:0; display: inline-block; vertical-align: top;}
+.share-box .btns a:last-child {margin-left:12px;}
+.share-box .btns a svg {width:53px; height:53px;}
+.info-title .title {font-size:24px; line-height: 38px; font-weight: 700;}
+.info-li ul li {position:relative; font-size:15px; line-height:26px; padding-left:10px; box-sizing: border-box;}
+.info-li ul li:before {content:"・"; position:absolute; top:0px; left:0; font-size:15px; line-height: 26px;}
+.serial .copy {box-sizing: border-box;}
+.serial .copy span {font-size:15px; line-height: 26px; font-weight: bold;}
+.textbox .copy span {font-size:15px; line-height: 26px; }
+.info-accordion-btn .accordion-block {position: relative; border-top: 3px solid #032237;}
+.info-accordion-btn .accordion-title {position:relative; display: block;box-sizing: border-box;font-weight: bold;font-size: 18px;line-height: 22px;width: 100%;text-align: left;border: none; padding:20px 30px 20px 0;}
+.info-accordion-btn .accordion-title:before {content: "";display: inline-block;height: 100%;vertical-align: middle;}
+.info-accordion-btn .accordion-title .plus-icon {position:absolute; top:50%; right:0; margin-top:-11px;}
+.info-accordion-btn .accordion-title .plus-icon svg {width:22px; height:22px; transform:rotate(0deg); transition:transform 0.3s;}
+.info-accordion-btn .accordion-title.is-active .plus-icon svg {transform:rotate(225deg);}
+.info-accordion-btn .accordion-content {display: none;}
+.info-accordion-btn .accordion-content .list-text {position:relative; padding-bottom:30px; font-size:15px; line-height: 26px;}
+.info-accordion-btn .accordion-content .list-text li {position:relative; padding-left:10px; box-sizing: border-box; word-wrap: break-word; white-space: break-spaces;}
+.info-accordion-btn .accordion-content .list-text li:before {content:"・"; position:absolute; top:0; left:0; font-size:15px; line-height: 26px;}
+.btn-apply {position:fixed; z-index: 99; opacity:0; bottom:0; left:0; width:100%; padding:20px 15px; box-sizing: border-box;}
+.btn-apply.is-active{opacity:1;-webkit-transition: transform 0.5s, opacity 0.5s;-webkit-transform: translateY(-10px);transition: transform 0.5s, opacity 0.5s;transform: translateY(-10px);}
+.btn-apply.is-active.nofloating, .btn-apply.nofloating {position:relative; transition:none; transform: none; -webkit-transition: none; -webkit-transform: none;bottom:initial}
+.btn-apply.nofloating a {position:relative; max-width:375px; padding:20px 15px;margin:0 auto; box-sizing: border-box;}
+.btn-apply .btn {display: block; padding:21px 0 21px; max-width:340px; text-align: center; border-radius: 25px;margin: 0 auto;font-size:20px; line-height: 24px; font-weight: 700;}
+.btn-apply .btn span {font-size:20px; line-height: 24px; font-weight: 700;}
+.btn-apply .btn svg { margin-left:8px;}
+.btn-apply.inApp_iphonex {bottom:16px;}
+.share-btn .inner {text-align: center;}
+.share-btn .btn {display: inline-block; max-width: 375px; padding:25px 40px; margin: 0 auto; text-align: center; border-radius: 35px;}
+.share-btn .btn img,.share-btn .btn svg {width:auto; height:24px; vertical-align: top;}
+.share-btn .btn svg.share-btn-icon {margin-right:10px;}
+.share-btn .btn svg.share-btn-text {margin-top: 3px; height: 19px;}
+.share-btn .btn svg.share-copy {width:151px;}
+.share-btn .btn span {font-size:21px; line-height: 25px; font-weight: 700;}
+.share-btn.position-static{position: static;}
+/* popup */.popups {position:fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 999; transition: all 0.4s; width:100%; height:100%; display: table; text-align: center; visibility: hidden; opacity:0;}
+.popups.on {visibility: visible; opacity: 1;}
+.popups .pop-inner {display: table-cell; vertical-align: middle;}
+.popups .bg {position:absolute; top:0; left:0; width:100%; height:200%; background-color:rgba(0,0,0,0.4);}
+.popups .pop-content {position:relative; max-width:330px; padding:0 20px; margin:0 auto;}
+.popups .pop-content-inner {background-color:#fff; font-size:0; border-radius: 20px;}
+.popups .copy {position:relative; display: block; padding:40px 20px 35px; text-align: center; font-size:20px; line-height: 24px; font-weight: bold; word-break: break-all; white-space: break-spaces;}
+.popups .copy .desc {display:block;margin-top:25px; font-weight: 400; font-size: 15px; line-height: 18px; letter-spacing: -1px; word-break: break-all; white-space: break-spaces;}
+.popups .btns {padding:0 12px 12px;}
+.popups .img-wrap {padding:0 14px 35px;}
+.popups img {width: auto;max-width: 100%;max-height: 230px;box-sizing: border-box;}
+.popups .ok-btn {display:block; width:100%; background-color:#ffe400; text-align: center; font-size:20px; line-height:24px; padding:18px 0 17px; border-radius: 10px; font-weight: 700;}
+.popups .ok-btn.cancel {display:inline-block;width:80px;}
+.popups .ok-btn.cancel + .ok-btn {display:inline-block;width:calc(100% - 90px);margin-left:10px;text-wrap:nowrap;}
+.popups.full .pop-content {width: 100%;max-width: none;padding: 0;margin: 0;}
+.popups .two button {display: inline-block;}
+.popups .two button:nth-of-type(1) {width:30%;}
+.popups .two button:nth-of-type(2) {width:70%;}
+.popup-finish .copy svg {width:142px;}
+.popup-finish .ok-btn svg {width:129px;}
+.popup-to-app .copy svg {width:142px;}
+.popup-to-app .ok-btn svg {width:33px;}
+.popup-not-found .goto-create-btn {background-color:#ffe400; text-align: center; font-size:20px; line-height:24px; padding:18px 0 17px; border-radius: 10px; font-weight: 700;}
+.popup-share {bottom: 0;padding: 0;display:block;}
+.popup-share .inner {display:block;}
+.popup-share .pop-content {position: absolute;left: 0;bottom: -351px;transition:bottom 0.3s;}
+.popup-share .bg {opacity: 0;transition:opacity 0.3s;}
+.popup-share.on .pop-content {bottom: -50px;}
+.popup-share.on .bg {opacity: 1;}
+.popup-share .pop-content-inner {margin: 0 auto;padding: 10px 18px 30px 17px;border-radius: 30px 30px 0 0; box-sizing: border-box;}
+.popup-share .btn-close {position: relative;width: 35px;height: 5px;border-radius: 20px;text-indent: -9999px;background: #EAECEF;}
+.popup-share .btn-close { position: relative; width: 35px; height: 5px; border-radius: 20px; text-indent: -9999px; background: #EAECEF;}
+.popup-share .pop-share-btn-list { margin-top: 35px;}
+.popup-share li+li { margin-top: 10px;}
+.popup-share .pop-share-btn-list a { display: inline-flex; align-items: center; justify-content: center; width: 100%; height: 60px;font-size: 15px; background: #F1F1F1; border-radius: 15px; font-weight: 600; color: #000;}
+.popup-share .pop-share-btn-icon { margin-right: 6px; width: 26px; height: 26px;}
+.popup-share .pop-share-btn-list button:after { content: none;}
+.popup-share .pop-share-btn-list .kakaotalk { background: #FAE200;}
+.popup-share .pop-share-btn-list .facebook { background: #1877F2; color: #fff;}
+.popup-share .pop-share-btn-list .twitter { background: #1D9BF0; color: #fff;}
+.popup-share.on { display: block; visibility: visible; opacity: 1;}
+.popup-share.on .pop-content { bottom: 0;}
+.info-title, .info-li,.info-accordion-btn,.serial {padding:0 30px;}
+.info-li .outlink{ word-break: break-all; text-decoration: underline; font-weight: bold;}
+/* video */
+.video-wrapper {height:100vh;position: relative;}
+video#videoCover {display:block;margin:0 auto;width:100%;height:100vh;object-fit: cover;}
+video {width:100%; -webkit-mask-image: -webkit-radial-gradient(white, black); -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden;}
+.video-on-text {position: absolute;top: 50%;left: 50%;transform: translate(-50%);}    
+.video-on-text span {display: inline-block;line-height:1.5;white-space: pre;text-align: center;}
+
+/* swiper */
+.swiper{ overflow: visible; -webkit-backface-visibility: hidden; -webkit-transform: translate3d(0,0,0);}
+.swiper-wrapper.diffWidth img {width:auto;max-height:100%;}
+.swiper-slide {width: fit-content; }
+.swiper-bullet{text-align: center;}
+.swiper-pagination-bullet { margin: var(--swiper-pagination-bullet-horizontal-gap, 0) var(--swiper-pagination-bullet-vertical-gap, 0); }
+.swiper-pagination-bullet-active{ transition:all .5s}
+.swiper-pagination-bullet{ transition:all .5s}
+
+@keyframes updownup{ 0%{transform:translateY(-10px)} 50%{transform:translateY(0px)} 100%{transform:translateY(-10px)} }
+@keyframes seq-ani-horizon {0% {background-position:-100% 0;} }
+@keyframes seq-ani-vertical {0% {background-position:0 -100%;} }
+
+
+/* info theme */
+.info-title {background:#f1f1f1;color:#333;}
+.info-li {background:#f1f1f1;color:#333;}
+.serial {background:#f1f1f1;color:#333;}
+.info-accordion-btn {background:#f1f1f1;color:#333;}
+.info-accordion-btn .accordion-title {color:inherit;}
+.info-accordion-btn .plus-icon {fill: #333;}
+.info-accordion-btn .accordion-block {border-top: 3px solid; border-color:inherit;}
+
+.theme-dark .info-title {background:#444; color:#fff}
+.theme-dark .info-li {background:#444; color:#fff;}
+.theme-dark .serial {background:#444; color:#fff;}
+.theme-dark .info-accordion-btn {background:#444;color:#fff;}
+.theme-dark .info-accordion-btn .accordion-title {color:inherit;}
+.theme-dark .info-accordion-btn .plus-icon {fill: #fff;}
+.theme-dark .info-accordion-btn .accordion-block {border-top: 3px solid; border-color:inherit;}
+
+.kabang-header {position:relative; z-index:3;}
+section {z-index:3;}
+.white-dimmed {position:absolute; top:0; left:0; width:100%; height:100vh; background-color:#fff; z-index:2;}
+.info-title,
+.info-li,
+.info-accordion-btn, 
+.serial,
+.share-btn {z-index:1;}
+  </style>
+
+  <script>
+    (function() {
+      var html = document.documentElement;
+      if (html.getAttribute('class') === 'not_supported') {
+        alert(
+            '인터넷 익스플로러는 9버전부터 지원합니다.\n현재 접속하신 버전에서는 내용이 정상적으로 보이지 않을 수 있습니다.'
+        );
+      }
+    })();
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NNBFK9V');
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NNBFK9V"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+        title="빈프레임"
+    ></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="content">
+
+    
+      
+    
+
+    <style>
+      html, body {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: -moz-none;
+        -o-user-select: none;
+        user-select: none;
+      }
+    </style>
+
+    <main class="wrap ">
+    
+        <section class="white-dimmed"></section>
+    
+        <section data-v-3b126bed="" data-v-73cb61e2="" class="sec-imagebox " style="background-color: rgb(255, 252, 235); padding-bottom: 0px; padding-top: 0px; border-radius: 0px;"><img data-v-3b126bed="" src="https://cdn.discordapp.com/attachments/1146776976363892817/1180152454176849920/1.png?ex=657c619f&is=6569ec9f&hm=940584f54d16ab78c5d6ae57293dee3197bb5d9fb3cffcd1aff5f4ceb79f0f64&" class="" style="margin: 0px auto; max-width: 340px; transition-delay: initial;"><!----></section><section data-v-3b126bed="" data-v-73cb61e2="" class="sec-imagebox " style="background-color: rgb(245, 242, 155); padding-bottom: 0px; padding-top: 0px; border-radius: 0px;"><img data-v-3b126bed="" src="https://og.kakaobank.io/view/3de669b7-22e7-4abf-a0b0-675a032a6e18" class="" style="margin: 0px auto; max-width: 340px; transition-delay: initial;"><!----></section><section data-v-73cb61e2="" class="textbox " style="background-color: rgb(245, 242, 155); padding-bottom: 0px; padding-top: 0px;"><div class="inner" style="padding-left: 0px; padding-right: 0px;"><div class="copy" style="color: rgb(0, 0, 0); text-align: center;"><span class="inner" style="color: rgb(0, 0, 0); text-align: center; transition-delay: initial; font-weight: normal; font-size: 20px;"></span></div></div></section><section data-v-3b126bed="" data-v-73cb61e2="" class="sec-imagebox " style="background-color: rgb(245, 242, 155); padding-bottom: 50px; padding-top: 0px; border-radius: 0px;"><img data-v-3b126bed="" src="https://cdn.discordapp.com/attachments/1146776976363892817/1180152454453661718/2.png?ex=657c619f&is=6569ec9f&hm=042785ca1b5c31b1bcabefe3a6cec1ffcd40562fa97e91aca3a01d65e4a388ae&" class="" style="margin: 0px auto; max-width: 340px; transition-delay: initial;"><!----></section><section data-v-73cb61e2="" class="link-apply-copy link-apply sec-imagebox " style="background-color: rgb(245, 242, 155);"><div class="inner" style="text-align: center; padding: 0px; transition-delay: initial;"><!----><!----><a target="_blank"href="https://t.me/talkpings" class="btn web " style="background-color: rgb(245, 242, 155);"><img src="https://cdn.discordapp.com/attachments/1146776976363892817/1162249140693119117/telegram_pop.png?ex=657bd95c&is=6569645c&hm=8d28b2a2430a44af18d734e95df4a9620df6c074fe2fc11b1238de893482c0d7&" style="max-width: 340px;"><!----></a><!----><!----></div></section>
+        <section data-v-3b126bed="" data-v-73cb61e2="" class="sec-imagebox " style="background-color: rgb(245, 242, 155); padding-bottom: 0px; padding-top: 0px; border-radius: 0px;"><!----></section><section data-v-3b126bed="" data-v-73cb61e2="" class="sec-imagebox " style="background-color: rgb(245, 242, 155); padding-bottom: 0px; padding-top: 0px; border-radius: 0px;"><!----></section><section data-v-73cb61e2="" class="share-btn position-static" style="background-color: rgb(245, 242, 155); padding-bottom: 60px; padding-top: 60px;"><div class="popups popup-share full"><div class="pop-inner"><button class="bg"></button><div class="pop-content"><div class="pop-content-inner"><button class="btn-close">닫기 버튼</button><ul class="pop-share-btn-list share-btns"><li><a data-share="kakaotalk" title="카카오톡 공유" href="javascript:void 0;" class="share-btn-kt kakaotalk"><!-- 카카오톡 아이콘 --><img src="https://og.kakaobankcontent.com/common/resource/img/icon_kt.png" alt="카카오톡 아이콘" class="pop-share-btn-icon"><!-- 카카오톡 텍스트 --><span class="pop-share-btn-text">카카오톡</span></a></li><li><a data-share="facebook" title="페이스북 공유" href="javascript:void 0;" class="share-btn-fb facebook"><!-- 페이스북 아이콘 --><img src="https://og.kakaobankcontent.com/common/resource/img/icon_fb.png" alt="페이스북 아이콘" class="pop-share-btn-icon"><!-- 페이스북 텍스트 --><span class="pop-share-btn-text">페이스북</span></a></li><li><a data-share="twitter" title="트위터 공유" href="javascript:void 0;" class="share-btn-tw twitter"><img src="https://og.kakaobankcontent.com/common/resource/img/icon_twitter.png" alt="트위터 아이콘" class="pop-share-btn-icon"><span class="pop-share-btn-text">트위터</span></a></li><!--  --></ul><div class="clear"></div></div></div></div></div></section><section data-v-73cb61e2="" class="info-title" style="padding-bottom: 40px; padding-top: 80px;"><div class="inner"><span class="title">톡패스 문의 텔레 : talkpings</span></div></section><section data-v-73cb61e2="" class="info-li" style="padding-bottom: 30px; padding-top: 0px;"><div class="inner"></div></section>
+
+    </main>
+
+  </div>
+  
+
+  <!-- End Google Tag Manager -->
+  <script src="https://og.kakaobankcontent.com/common/resource/js/kakao.min.js"></script>
+  <script src="https://og.kakaobankcontent.com/common/resource/js/compare-versions.js"></script>
+  <script src="https://og.kakaobankcontent.com/common/resource/js/uxhr.js"></script>
+    
+  <script>
+    var fromClient = '{Chrome 119 0 0  false}'.replace(/\ /g, '');
+    var appVersion = fromClient.match(/\"appVersion\"\:\".*?\"/igm) || '';
+    var inapp = "false" === "true" ? true : false;
+    var source = "Windows" === "iOS" || "Windows" === "Android" ? "MOBILE" : "PC"
+    var isLive = true;
+    var at = "2023-12-01 23:00:46.670316158 +0900 KST";
+
+
+    (function () {
+      var toConvertStringNumber = function (num, zeroString) {
+        var zero = zeroString ? zeroString : '00';
+        return (zero + num).slice(-(zero.length));
+      }
+      var curDate = new Date((at).split(' ').slice(0, 2).join('T'));
+      var finishPopup = $('.popup-finish');
+      curDate.setSeconds(0); curDate.setMilliseconds(0);
+      var compareFromDate = new Date("2023-08-17T17:12")
+      var compareToDate = new Date("2023-12-22T23:59")
+
+      if(curDate.getTime() < compareFromDate.getTime()){
+       return  window.location.href="https://www.kakaobank.com"
+      }
+      else if(curDate.getTime() > compareToDate.getTime()){
+        isLive = false;
+        $(".popup-finish").addClass("on");
+        changeButtonView('finished')
+      }
+
+      if ($(".popup-time-to").length > 0) {
+
+        try {
+          var compareFromDate = new Date($(".popup-time-to").data().timefromup )
+          var compareToDate = new Date($(".popup-time-to").data().timetomup )
+
+          if(curDate.getTime() > compareFromDate.getTime() && curDate.getTime() < compareToDate.getTime())
+          $(".popup-time-to").addClass('on');
+          } catch (error) {
+            alert(error)
+          }
+      }
+      var referer = "<no value>";
+      var headers = {
+        cstNo: "",
+        mgmtNo: "",
+        simnId: "3d3e3cc270827b28c983f908cb2e1c1d"
+      };
+
+      var machineId = "2022480069879927977";
+      var trans = TransClient.init({
+        machineId: machineId,
+        cstNo: headers.cstNo,
+        mgmtNo: headers.mgmtNo,
+        simnId: headers.simnId
+      });
+
+      function init() {
+        setScrollEvent();
+        /*  */
+        setPc();
+        /*  */
+        setOneLink();
+        dataSetLinkApply();
+        setBtns();
+        setBtnsShare();
+        setFloatingBtn();
+        setSharePopup();
+
+        $(".info-accordion-btn").eq($(".info-accordion-btn").size() - 1).find(".accordion-block").css({
+          "border-bottom-width": "3px",
+          "border-bottom-style": "solid"
+        })
+      }
+
+
+      function setScrollEvent(){
+        const $inmotionSection = $(".inmotion");
+        const inmotionSectionLen = $inmotionSection.size();
+        var initFlag = false;
+        // inmotion
+        function scroll() {
+          var st =  $(window).scrollTop();
+          var ih = $(window).innerHeight();
+          if ( st > 20 && !initFlag) { // #scroll button showup
+            $('.btn-apply').addClass('is-active');
+            initFlag=true;
+          }
+
+          for (var i = 0; i < inmotionSectionLen; ++i) {
+            var currentSection = $inmotionSection.eq(i);
+            if(!currentSection.hasClass("play-inmotion")) {
+              if ( currentSection.offset().top  <ih ) {
+                  currentSection.addClass("play-inmotion");
+              }
+              if (st > currentSection.offset().top - ih + 130) {
+                  currentSection.addClass("play-inmotion");
+              }
+            }
+          }
+        }
+        scroll();
+        $(window).on("scroll resize", scroll);
+      }
+
+      function setPc() {
+        /*  */
+        Kakao.init('8b2ae16a58bdc8dc8e59efd32d744c70');
+
+        window.fbAsyncInit = function () {
+          FB.init({
+            appId: '215393939255906',
+            autoLogAppEvents: true,
+            xfbml: true,
+            version: 'v3.0',
+          });
+        };
+
+        (function (d, s, id) {
+          var js,
+            fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {
+            return;
+          }
+          js = d.createElement(s);
+          js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        })(document, 'script', 'facebook-jssdk');
+        /*  */
+      }
+
+      function changeButtonView(state){
+        const stateLowercase = state.toLocaleLowerCase();
+        const convertLowerCase = "[data-"+stateLowercase+"]";
+          $(convertLowerCase).map(function(index,item){
+          var itemEl = $(item);
+          var status =itemEl.data()[stateLowercase];
+          if(!!status && status !== ''){
+            var statusArray = status.split(',');
+              itemEl.html("<span class='btn' style='background-color:"+statusArray[1]+"; color: "+ statusArray[2]+"'>"+statusArray[0]+"</span>")
+          }
+        })
+      }
+      /*  */
+        function setOneLink() {
+          $('#btnBottom, .btn-goapp').each(function () {
+            var $that = $(this);
+            $(this).attr('href', (function () {
+              var onelink = $that.attr('href');
+              var keys = (function (arr) {
+                var obj = {};
+                var splitdata;
+                for (var i = 0, j = arr.length; i < j; i++) {
+                  splitdata = arr[i].split('=')
+                  if (splitdata[0] && splitdata[1] &&
+                    splitdata[0].indexOf('utm_') == 0 ||
+                    splitdata[0].indexOf('af_') == 0
+                  )
+                    obj[splitdata[0]] = splitdata[1]
+                }
+                return obj;
+              }(location.search.replace(/\?/, '').split('&')))
+
+              var keysToQuery = [];
+
+              var queries = Object.keys(keys);
+
+              for (var i = 0, j = queries.length; i < j; i++) {
+                keysToQuery.push(queries[i] + '=' + keys[queries[i]])
+              }
+              return onelink + (keysToQuery.join('&') ? '?' + keysToQuery.join('&') : '');
+            }()))
+          })
+        }
+
+   
+        /*  */
+
+        function dataSetLinkApply() {
+          var length = $('.link-apply-copy').length;
+          for(var i = 0; i< length ; i++) {
+            $('.link-apply-copy').get(i).setAttribute('data-index', i + 1)
+          }
+        }   
+
+        function setBtns() {
+
+          $('.accordion-title').click(function () {
+            var $this = $(this);
+            if ($this.hasClass('is-active')) {
+              $this.removeClass('is-active').next('.accordion-content').slideUp();
+            } else {
+              $this.addClass('is-active').next('.accordion-content').slideDown();
+            }
+          })
+
+          var doubleClickFlag = false;
+          $(".btn-apply a").click(function (e) {
+
+            if(!isLive){
+              e.preventDefault();
+              return $(".popup-finish").addClass("on");
+            }
+
+           if($(e.currentTarget).parent().hasClass('nofloating')){
+                  if( source === "PC") 
+                     return $(".popup-to-app").addClass("on");
+                  if( typeof KabangAppInterface  !== "undefined") 
+                     return KabangAppInterface.openWeb($(e.currentTarget).data().href)
+                 else 
+                   return window.open($(e.currentTarget).data().href);
+              }
+
+            /*  */
+              /*  */
+                e.preventDefault();
+                $(".popup-to-app").addClass("on");
+                $(".popup-to-app-onlypc").addClass("on");
+                return;
+              /*  */
+
+            /*  */
+          })
+
+
+          $(".share-btn .btn").on("click", function () {
+
+            if(!isLive)
+            return $(".popup-finish").addClass("on");
+
+            $('.popup-share').addClass("on");
+          })
+
+          $(".popups .ok-btn, .popups .bg, .popup-share .btn-close").on("click", function () {
+            if ($(this).closest('.popup-share').length > 0) {
+              $('.popups').removeClass("on");
+              return;
+            }
+
+            if (source !== "PC" && $(this).closest('.popup-to-app').length > 0) {
+              window.open("https://kakaobank.onelink.me/0qMi/n2557t5g"+location.search);
+            }
+
+            hidePop();
+          })
+
+          $(".accordion-title").on("click", function () {
+            if ($(this).hasClass("is-active")) $(this).attr("title", "상세내용 닫기");
+            else $(this).attr("title", "상세내용 열기");
+          })
+        }
+
+        function setBtnsShare() {
+          var snsData = {
+            ogTitle: $('meta[property="og:title"]').attr("content"),
+            ogUrl: $('meta[property="og:url"]').attr("content"),
+            ogDesc: $('meta[property="og:description"]').attr("content"),
+            ogThumbKt: $('meta[property="kt:image"]').attr("content"),
+            ogBtns: "자세히 보기"
+          };
+
+          $('.share-btn-tw').click(function () {
+            /*  */
+              window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(snsData.ogUrl));
+            /*  */
+          });
+
+          $('.share-btn-kt').click(function () {
+            /*  */
+            Kakao.Link.sendDefault({
+              objectType: 'feed',
+              content: {
+                title: snsData.ogTitle,
+                description: snsData.ogDesc,
+                imageUrl: snsData.ogThumbKt,
+                link: {
+                  mobileWebUrl: snsData.ogUrl,
+                  webUrl: snsData.ogUrl,
+                },
+              },
+              buttons: [{
+                title: '자세히 보기',
+                link: {
+                  mobileWebUrl: snsData.ogUrl,
+                  webUrl: snsData.ogUrl,
+                },
+              },],
+            });
+            /*  */
+          })
+
+          /*  */
+
+          $('.share-btn-fb').click(function () {
+            /*  */
+            window.open('http://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(snsData.ogUrl))
+            /*  */
+          })
+
+          /*  */
+        }
+
+        function showPop(_class) {
+          $("." + _class).addClass("on");
+        }
+
+        function hidePop() {
+          $(".popups").removeClass("on");
+        }
+
+        function setSharePopup() {
+          var transitionEnd = 'transitionend webkitTransitionEnd oTransitionEnd otransitionend';
+          $('.popup-share .pop-content').on(transitionEnd, function () {
+            if (!$('.popup-share').hasClass('on')) {
+              $('.popup-share').removeClass('on');
+            }
+          });
+        }
+
+
+        var swiperEL =  $('.swiper');
+        if (swiperEL.length > 0){
+          swiperEL.map(function(){ 
+            var data =$(this).data();
+            var option =  {
+              slidesPerView: data.slidesperview,
+              spaceBetween: data.spacebetween,
+              loop: data.loop ? data.loop : false,
+              effect: data.effect,
+              slidesOffsetBefore: 0,
+              centeredSlides: data.centeredslides ? data.centeredslides : false,
+            }
+
+            if(data.effect === 'fade'){
+              $(swiperEL).find('swiper-wrapper').addClass('swiper-fade')
+            }
+            if(!!data.autoplay && data.autoplay !== false)
+            option.autoplay = data.autoplaytime ? {delay : data.autoplaytime}: true;
+          
+            if(!!data.pagination && data.pagination !== false){
+              $(this).append("<div class='swiper-bullet'></div>")
+              option.pagination= {
+                el: '.swiper-bullet',
+                clickable: true,
+                type: data.bullettype,
+              };
+            }
+            new Swiper($(this),option);
+          }).toArray();
+        }
+        function setFloatingBtn() {
+          try {
+            var browser = '{Chrome 119 0 0  false}',
+              fromClient = browser.replace(/\ /g, ''),
+              topSafeArea = fromClient.match(/\"hasTopSafeArea\"\:\".*?\"/igm)[0].replace(/\"/g, '').split(':')[1],
+              bottomSafeArea = fromClient.match(/\"hasBottomSafeArea\"\:\".*?\"/igm)[0].replace(/\"/g, '').split(':')[1];
+
+            if (topSafeArea === "Y" && bottomSafeArea === "Y") {
+              $(".btn-apply").addClass("inApp_iphonex");
+            }
+          } catch (e) { }
+        }
+      init();
+    })()
+  </script>
+  <script></script>
+  <style></style>
+</body>
+</html>
